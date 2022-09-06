@@ -44,6 +44,9 @@ Follow: www.twitter.com/themehats
 <link href="assets/base/css/themes/default.css" rel="stylesheet" id="style_theme" type="text/css"/>
 <link href="assets/base/css/custom.css" rel="stylesheet" type="text/css"/>
 <!-- END THEME STYLES -->
+<!-- BEGIN: COOKIE CSS -->
+<link rel="stylesheet" type="text/css" href="assets/base/css/cookieconsent.min.css" />
+<!-- END: COOKIE CSS -->
 <link rel="shortcut icon" href="favicon.ico"/>
 </head>
 <body class="c-layout-header-fixed">
@@ -567,9 +570,36 @@ Follow: www.twitter.com/themehats
 <script src="assets/plugins/counterup/jquery.counterup.min.js" type="text/javascript"></script>
 <script src="assets/plugins/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
 <!-- END: LAYOUT PLUGINS -->
+<!-- BEGIN: COOKIE JS -->
+<script src="assets/base/js/cookieconsent.min.js"></script>
+<!-- BEGIN: COOKIE JS -->
 <!-- BEGIN: THEME SCRIPTS -->
 <script src="assets/base/js/components.js" type="text/javascript"></script>
 <script src="assets/base/js/app.js" type="text/javascript"></script>
+<!-- BEGIN: COOKIE SCRIPT -->
+<script>
+	window.addEventListener("load", function(){
+	window.cookieconsent.initialise({
+	  "palette": {
+		"popup": {
+		  "background": "#32c5d2"
+		},
+		"button": {
+		  "background": "#FFC601",
+		  "text": "#000000",
+		  "border": "#FFC601"
+		}
+	  },
+	  "position": "bottom-left",
+		"content": {
+		"message": "Nós usamos cookies. Eles são usados para aprimorar a sua experiência. Ao fechar este banner ou continuar na página, você concorda com o uso de cookies.",
+		"dismiss": "ENTENDI!",
+		"link":"Leia Mais.",
+		  "href": "politica-privacidade.html"
+		  }
+	})});
+</script>
+<!-- END: COOKIE SCRIPT -->
 <script>
 	$(document).ready(function() {    
 		App.init(); // init core   
